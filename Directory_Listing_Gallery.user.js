@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Directory Listing Gallery
 // @namespace    Brain++ OSS
-// @version      1.1
+// @version      1.2
 // @author       Weiran He <hwr@megvii.com>
 // @include      /^https:\/\/oss.iap.*.brainpp\.cn\/.*$/
 // @grant        none
@@ -9,8 +9,8 @@
 // @require      http://code.jquery.com/jquery-2.2.4.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js
 // @supportURL   https://discourse.brainpp.cn/t/topic/33465
-// @updateURL    https://gist.github.com/hewr1993/8b42a79ad795dfbed2c2a1246260dda1
-// @downloadURL  https://bitbucket.org/!api/2.0/snippets/hewr1993/knzoAB/52527a26dc96198c31bf4c453b6ca931754d8ce3/files/Directory_Listing_Gallery.user.js
+// @updateURL    https://github.com/hewr1993/TamperMonkeyScripts/blob/master/Directory_Listing_Gallery.user.js
+// @downloadURL  https://github.com/hewr1993/TamperMonkeyScripts/raw/master/Directory_Listing_Gallery.user.js
 // ==/UserScript==
 
 (function() {
@@ -108,7 +108,7 @@
                 let gal = this;
                 gal.lazyLoadChunks(1);
                 $("#dlg_float_btn").attr('style', 'visibility:hidden');
-                $("#dlg_float_btn_exit").attr('style', 'visibility:visible; z-index:20000');
+                $("#dlg_float_btn_exit").attr('style', 'visibility:visible; z-index:20000; top: 10px;');
                 $('#dlg_float_btn_exit').on("click", () => {
                     window.location.reload();
                     $("#dlg_float_btn_exit").attr('style', 'visibility:hidden');
