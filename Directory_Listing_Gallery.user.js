@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Directory Listing Gallery
 // @namespace    Brain++ OSS
-// @version      1.2
+// @version      1.3
 // @author       Weiran He <hwr@megvii.com>
 // @include      /^https:\/\/oss.iap.*.brainpp\.cn\/.*$/
 // @grant        none
@@ -108,7 +108,7 @@
                 let gal = this;
                 gal.lazyLoadChunks(1);
                 $("#dlg_float_btn").attr('style', 'visibility:hidden');
-                $("#dlg_float_btn_exit").attr('style', 'visibility:visible; z-index:20000; top: 10px;');
+                $("#dlg_float_btn_exit").attr('style', 'visibility:visible; z-index:20000; top: 10px; height: 40px');
                 $('#dlg_float_btn_exit').on("click", () => {
                     window.location.reload();
                     $("#dlg_float_btn_exit").attr('style', 'visibility:hidden');
